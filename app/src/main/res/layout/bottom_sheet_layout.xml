@@ -4,6 +4,9 @@
     android:id="@+id/bottomSheetLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    android:background="@drawable/bottom_sheet_bg"
+    app:layout_behavior="@string/bottom_sheet_behavior"
     android:padding="8dp">
 
     <TextView
