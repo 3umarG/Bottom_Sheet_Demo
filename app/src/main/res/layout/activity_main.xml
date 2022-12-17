@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnShowButtomSheet"
+        android:id="@+id/btnShowModalBottomSheet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Button Sheet"
+        android:text="Show Modal Button Sheet"
         android:textAllCaps="false"
         android:textSize="22sp"
         android:layout_gravity="center"
@@ -19,14 +19,21 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    
-    <FrameLayout
-        android:id="@+id/bottomSheetStandard"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:behavior_hideable="true"
-        app:behavior_peekHeight="100dp"
-        android:background="@drawable/bottom_sheet_bg2"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/btnShowPersistentBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Show Persistent Button Sheet"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnShowModalBottomSheet"
+        app:layout_constraintVertical_bias="0.32" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
